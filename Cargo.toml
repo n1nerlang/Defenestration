@@ -1,0 +1,31 @@
+[package]
+name = "defenestration_os"
+version = "0.1.0"
+edition = "2021"
+authors = ["krovixa <lupsup39@github>"]
+description = "A hyper-minimal, telemetry-free Linux overlay deployment system."
+
+# -----------------------------------------------------------------------------
+# 📦 Core Dependencies
+# -----------------------------------------------------------------------------
+[dependencies]
+# The hardware-accelerated GUI engine powering the setup wizard & win7 splash screen
+eframe = { version = "0.27", default-features = false, features = [
+    "glow",          # Enables hardware-accelerated rendering via OpenGL
+    "wgpu",          # Backup modern graphics backend pipeline
+    "x11",           # Crucial for running seamlessly on our Arch Linux live environment
+] }
+
+# -----------------------------------------------------------------------------
+# 🚀 Compilation Profiles
+# -----------------------------------------------------------------------------
+# Optimized development profile for fast iteration loops
+[profile.dev]
+opt-level = 1
+
+# Hyper-slim release profile to minimize final ISO footprint on potato PCs
+[profile.release]
+opt-level = 3
+lto = true           # Link-Time Optimization to strip dead corporate code paths
+codegen-units = 1    # Maximizes optimization over compilation speed
+panic = "abort"      # Immediate execution termination on crash to preserve memory

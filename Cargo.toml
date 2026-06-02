@@ -2,7 +2,7 @@
 name = "defenestration_os"
 version = "0.1.0"
 edition = "2021"
-authors = ["krovixa <lupsup39@github>"]
+authors = ["n1nerlang llc"]
 description = "A hyper-minimal, telemetry-free Linux overlay deployment system."
 
 # -----------------------------------------------------------------------------

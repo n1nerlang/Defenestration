@@ -1,10 +1,14 @@
-# 🪟 💨 Defenestration OS
+<div align="center">
+  <img src="defens.png" width="350" alt="Defenestration OS Logo">
+  
+  <h1>🪟 💨 Defenestration OS</h1>
+  
+  <p><b>The ultimate telemetry-free, potato-optimized operating system layout.</b></p>
 
-> **Defenestration OS** (noun): The act of throwing Windows out the window. 
-
-An open-source, telemetry-purged, ultra-lightweight operating system environment built to replace the modern Windows 11 user experience with a clean, traditional, and private desktop. 
-
-Built completely in the cloud using **OS-as-Code** principles—zero massive local source code downloads or hardware-melting local compilation required.
+  <img src="https://img.shields.io/github/license/n1nerlang/Defenestration?color=blue" alt="License">
+  <img src="https://img.shields.io/badge/Telemetry-Purged-orange" alt="Telemetry Status">
+  <img src="https://img.shields.io/badge/Idle%20RAM-%3C%20500MB-brightgreen" alt="RAM Footprint">
+</div>
 
 ---
 

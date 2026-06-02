@@ -1,0 +1,16 @@
+# --- Rust/Cargo Build Artifacts ---
+/target/
+**/*.rs.bk
+Cargo.lock
+
+# --- Archiso / Build Output Directories ---
+/output/
+/work_dir/
+*.iso
+
+# --- IDEs and OS Metadata ---
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*~

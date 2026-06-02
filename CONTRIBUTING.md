@@ -7,9 +7,10 @@ Because Defenestration OS handles operations as **OS-as-Code**, you don't need a
 <details>
   <summary>Click to expand this section</summary>
   
-  ### Hidden Heading
-  This content stays hidden until the user clicks the summary text.
-  * You can include lists.
-  * You can include `code blocks`.
+  #### Defenestration OS (Active)
+
+  Objective: Telemetry-purged, ultra-lean Linux environment designed to reclaim older hardware from bloated ecosystem.
+  
+  Core Stack: Archiso, Rust (sys-shield), XFCE4, GitHub Actions CI.
 
 </details>

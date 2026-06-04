@@ -2,30 +2,36 @@
 name = "defenestration_os"
 version = "0.1.0"
 edition = "2021"
-authors = ["n1nerlang llc"]
+authors = ["n1nerlang <n1nerlang@github>"]
 description = "A hyper-minimal, telemetry-free Linux overlay deployment system."
 
 # -----------------------------------------------------------------------------
-# 📦 Core Dependencies
+# 📦 System Dependencies
 # -----------------------------------------------------------------------------
 [dependencies]
-# The hardware-accelerated GUI engine powering the setup wizard & win7 splash screen
+# The unified GUI engine powering sys-welcome, sys-paint, and sys-search
 eframe = { version = "0.27", default-features = false, features = [
-    "glow",          # Enables hardware-accelerated rendering via OpenGL
-    "wgpu",          # Backup modern graphics backend pipeline
-    "x11",           # Crucial for running seamlessly on our Arch Linux live environment
+    "glow",          # OpenGL rendering engine for rapid hardware acceleration
+    "wgpu",          # Modern native graphics pipeline fallback 
+    "x11",           # Critical for running flawlessly on top of an Arch Linux live environment
 ] }
 
+# Asset loaders required to pipe images/icons into egui textures
+egui_extras = { version = "0.27", features = ["image"] }
+
+# Lightweight image decoder restricted strictly to PNG payloads
+image = { version = "0.24", default-features = false, features = ["png"] }
+
 # -----------------------------------------------------------------------------
-# 🚀 Compilation Profiles
+# 🚀 High-Performance Compilation Profiles
 # -----------------------------------------------------------------------------
 # Optimized development profile for fast iteration loops
 [profile.dev]
 opt-level = 1
 
-# Hyper-slim release profile to minimize final ISO footprint on potato PCs
+# Hyper-slim release profile to maximize speed and minimize the final ISO footprint
 [profile.release]
-opt-level = 3
-lto = true           # Link-Time Optimization to strip dead corporate code paths
-codegen-units = 1    # Maximizes optimization over compilation speed
-panic = "abort"      # Immediate execution termination on crash to preserve memory
+opt-level = 3        # Aggressive binary code optimization
+lto = true           # Link-Time Optimization to aggressively strip unused code paths
+codegen-units = 1    # Reduces parallel compilation to maximize monolithic binary optimizations
+panic = "abort"      # Drops heavy stack-unwinding code; immediate termination on crash to save RAM

@@ -39,8 +39,9 @@ Instances of abusive, harassing, or otherwise unacceptable behavior may be repor
 ### Mods you should Call incase;
 
 Issues Mod/s;
+
 *[n1ner](github.com/n1nerlang)*
----
+<br>
 Maintainers;
 *[n1ner](github.com/n1nerlang)*
 
